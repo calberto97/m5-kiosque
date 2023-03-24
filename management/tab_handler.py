@@ -1,10 +1,10 @@
 from menu import products
 
 
-def calculate_tab(dict_list: list[dict]):
+def calculate_tab(menu: list[dict]):
     subtotal = 0
 
-    for consumed in dict_list:
+    for consumed in menu:
         for product in products:
             if product["_id"] == consumed["_id"]:
                 subtotal += product["price"] * consumed["amount"]
